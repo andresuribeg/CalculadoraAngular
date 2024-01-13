@@ -1,8 +1,25 @@
-<h1>
-<p>Mi calculadora</p>
-</h1>
+<!-- app.component.html -->
 
-<div>
-    <input type="number" placeholder="Ingrese un número" [(ngModel)]="numero1"/>
-    <input type="number" placeholder="Ingrese un número" [(ngModel)]="numero2"/>
+<div class="calculator-container">
+  <h1>Mi Calculadora</h1>
+
+  <div class="input-container">
+    <p>Ingrese el primer número</p>
+    <input type="text" placeholder="Ingrese un número" [(ngModel)]="numero1" />
+
+    <p>Ingrese el segundo número</p>
+    <input type="text" placeholder="Ingrese un número" [(ngModel)]="numero2" />
+  </div>
+
+  <div class="result-container">
+    <h2>Resultado: {{resultado}}</h2>
+  </div>
+
+  <div class="button-container">
+    <button (click)="suma()">Sumar (+)</button>
+    <button (click)="resta()">Restar (-)</button>
+    <button (click)="multiplica()">Multiplicar (*)</button>
+    <button (click)="divide()">Dividir (/)</button>
+    <button (click)="potencia()">Elevar (^)</button>
+  </div>
 </div>
